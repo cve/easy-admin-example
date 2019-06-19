@@ -1,0 +1,9 @@
+easy_admin:
+    entities:
+        Product:
+            class: App\Entity\Product
+        OrderItem:
+            class: App\Entity\OrderItem
+            list:
+                filters: [product]
+

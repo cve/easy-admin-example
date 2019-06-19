@@ -1,0 +1,44 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    mailhog:
+      image: mailhog/mailhog:latest
+      container_name: easy-admin-example-mailhog
+      ports:
+        - "8081:8025"
+
+    mariadb:
+      image: mariadb:10.4
+      container_name: easy-admin-example-mariadb
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - MYSQL_ROOT_PASSWORD=easy
+        - MYSQL_DATABASE=easy
+        - MYSQL_USER=easy
+        - MYSQL_PASSWORD=easy
+      ports:
+        - "8083:3306"
+
+    webserver:
+      image: nginx:alpine
+      container_name: easy-admin-example-webserver
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - "8080:80"
+
+    php-fpm:
+      build: phpdocker/php-fpm
+      container_name: easy-admin-example-php-fpm
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
+
