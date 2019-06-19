@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2d14727026b05117d0e00d3d987d7e8",
+    "content-hash": "325c8b4fd2f9cdc954e8823e941f9e3f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1207,16 +1207,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v2.1.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "0bc8e6963b9fdb63a98d940d1975eac4537fde0e"
+                "reference": "0212add338665958253848d349880b96770414a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/0bc8e6963b9fdb63a98d940d1975eac4537fde0e",
-                "reference": "0bc8e6963b9fdb63a98d940d1975eac4537fde0e",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/0212add338665958253848d349880b96770414a4",
+                "reference": "0212add338665958253848d349880b96770414a4",
                 "shasum": ""
             },
             "require": {
@@ -1289,7 +1289,7 @@
                 "backend",
                 "generator"
             ],
-            "time": "2019-06-05T17:41:34+00:00"
+            "time": "2019-06-19T13:49:16+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -7071,7 +7071,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "easycorp/easyadmin-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
